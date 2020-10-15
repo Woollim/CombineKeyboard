@@ -1,0 +1,9 @@
+
+
+use_frameworks!
+
+target 'CombineKeyboard_Example' do
+  pod 'CombineKeyboard', :path => '../'
+	pod 'SnapKit'
+	pod 'Then'
+end

@@ -1,0 +1,27 @@
+PODS:
+  - CombineKeyboard (1.0.0)
+  - SnapKit (4.2.0)
+  - Then (2.7.0)
+
+DEPENDENCIES:
+  - CombineKeyboard (from `../`)
+  - SnapKit
+  - Then
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
+    - Then
+
+EXTERNAL SOURCES:
+  CombineKeyboard:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CombineKeyboard: f357d890deb113bc0db1937c780cebf165ca4f20
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
+
+PODFILE CHECKSUM: 9b930f30df4674d6a5772cc7bfe1355194ee007e
+
+COCOAPODS: 1.8.4
