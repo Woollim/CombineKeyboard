@@ -16,19 +16,19 @@ public class CombineKeyboard {
     private let _frame: CurrentValueSubject<CGRect, Never>
     private var cancellables = Set<AnyCancellable>()
     
-	/// A publisher emitting current keyboard `frame`
-	/// You will be returned the current keyboard `frame` at start of subscription.
+    /// A publisher emitting current keyboard `frame`
+    /// You will be returned the current keyboard `frame` at start of subscription.
     public var frame: AnyPublisher<CGRect, Never> {
         _frame.removeDuplicates().eraseToAnyPublisher()
     }
     
-	/// A publisher emitting current keyboard `height`
-	/// You will be returned the current keyboard `height` at start of subscription.
+    /// A publisher emitting current keyboard `height`
+    /// You will be returned the current keyboard `height` at start of subscription.
     public var height: AnyPublisher<CGFloat, Never> {
         frame.map { UIScreen.main.bounds.height - $0.origin.y }.eraseToAnyPublisher()
     }
     
-	/// A publisher emitting current keyboard `height` when keyboard's height is updated
+    /// A publisher emitting current keyboard `height` when keyboard's height is updated
     public var heightUpdated: AnyPublisher<CGFloat, Never> {
         height.dropFirst().eraseToAnyPublisher()
     }
