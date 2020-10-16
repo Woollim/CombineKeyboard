@@ -16,17 +16,19 @@ public class CombineKeyboard {
     private let _frame: CurrentValueSubject<CGRect, Never>
     private var cancellables = Set<AnyCancellable>()
     
-    /// 현재 Keyboard의 Frame을 방출합니다. 관찰 한 직후 가장 최근 값이 방출됩니다.
+	/// A publisher emitting current keyboard `frame`
+	/// You will be returned the current keyboard `frame` at start of subscription.
     public var frame: AnyPublisher<CGRect, Never> {
         _frame.removeDuplicates().eraseToAnyPublisher()
     }
     
-    /// 현재 Keyboard의 Height를 방출합니다. 관찰 한 직후 가장 최근 값이 방출됩니다.
+	/// A publisher emitting current keyboard `height`
+	/// You will be returned the current keyboard `height` at start of subscription.
     public var height: AnyPublisher<CGFloat, Never> {
         frame.map { UIScreen.main.bounds.height - $0.origin.y }.eraseToAnyPublisher()
     }
     
-    /// Keyboard의 Height가 변경될 때 Height의 값이 방출됩니다.
+	/// A publisher emitting current keyboard `height` when keyboard's height is updated
     public var heightUpdated: AnyPublisher<CGFloat, Never> {
         height.dropFirst().eraseToAnyPublisher()
     }
