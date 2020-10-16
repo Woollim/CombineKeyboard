@@ -14,8 +14,8 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { 'Woollim' => 'galaxy000213@gmail.com' }
   s.source           = { :git => 'https://github.com/Woollim/CombineKeyboard.git', :tag => s.version.to_s }
-	s.frameworks = 'UIKit', 'Foundation', 'Combine'
-	s.platform = :ios, '13.0'
+  s.frameworks = 'UIKit', 'Foundation', 'Combine'
+  s.platform = :ios, '13.0'
   s.source_files = 'CombineKeyboard/*.swift'
-	s.swift_versions = "5.0"
+  s.swift_versions = "5.0"
 end
