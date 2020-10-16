@@ -144,7 +144,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 1200;
-				ORGANIZATIONNAME = CocoaPods;
+				ORGANIZATIONNAME = "Combine Community";
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;

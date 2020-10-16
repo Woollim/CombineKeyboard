@@ -3,6 +3,7 @@
 //  CombineKeyboard
 //
 //  Created by 이병찬 on 2020/10/16.
+//  Copyright © 2020 Combine Community. All rights reserved.
 //
 
 import UIKit
