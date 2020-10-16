@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.version          = '1.0.0'
   s.summary          = 'A way to getting iOS keyboard information with Combine'
   s.homepage         = 'https://github.com/Woollim/CombineKeyboard'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = 'MIT'
   s.author           = { 'Woollim' => 'galaxy000213@gmail.com' }
   s.source           = { :git => 'https://github.com/Woollim/CombineKeyboard.git', :tag => s.version.to_s }
 	s.frameworks = 'UIKit', 'Foundation', 'Combine'
